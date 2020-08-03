@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json.schemastore.org/eslintrc",
+  "root": true,
+  "plugins": [
+    "prettier"
+  ],
+  "extends": [
+    "plugin:prettier/recommended"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.md"
+      ],
+      "plugins": [
+        "markdown"
+      ]
+    },
+    {
+      "files": ["*.json"],
+      "plugins": [
+          "json"
+      ],
+      "extends": ["plugin:json/recommended"]
+    },
+    {
+      "files": ["themes/**/*.json"],
+      "rules": {
+        "json/*": ["error", {"allowComments": true}]
+    }
+    }
+  ]
+}

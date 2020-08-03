@@ -1,0 +1,62 @@
+{
+  "name": "vscode-color-theme-glacier",
+  "displayName": "Glacier",
+  "description": "",
+  "version": "0.0.1",
+  "publisher": "erozak",
+  "icon": "icon.png",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "engines": {
+    "vscode": "^1.47.0"
+  },
+  "galleryBanner": {
+    "color": "#0E151B",
+    "theme": "dark"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "Theme",
+    "Dark Theme"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Glacier Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/glacier-dark-color-theme.json"
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/erozak/vscode-color-theme-glacier"
+  },
+  "scripts": {
+    "list": "npx vsce ls",
+    "package": "npx vsce package",
+    "publish": "npx vsce publish"
+  },
+  "devDependencies": {
+    "eslint": "^7.6.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-json": "^2.1.2",
+    "eslint-plugin-markdown": "^1.0.2",
+    "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "prettier": "^2.0.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.{json,md}": [
+      "eslint --fix --cache",
+      "prettier --write"
+    ]
+  }
+}
