@@ -1,6 +1,6 @@
 {
-  "name": "vscode-color-theme-glacier",
-  "displayName": "Glacier",
+  "name": "vscode-color-theme-neo-glacier",
+  "displayName": "Neo Glacier",
   "description": "",
   "version": "0.0.1",
   "publisher": "erozak",
@@ -10,7 +10,7 @@
     "vscode": "^1.47.0"
   },
   "galleryBanner": {
-    "color": "#0E151B",
+    "color": "#121417",
     "theme": "dark"
   },
   "categories": [
@@ -23,15 +23,15 @@
   "contributes": {
     "themes": [
       {
-        "label": "Glacier Dark",
+        "label": "Neo Glacier Dark",
         "uiTheme": "vs-dark",
-        "path": "./themes/glacier-dark-color-theme.json"
+        "path": "./themes/neo-glacier-dark-color-theme.json"
       }
     ]
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/erozak/vscode-color-theme-glacier"
+    "url": "https://github.com/erozak/vscode-color-theme-neo-glacier"
   },
   "scripts": {
     "list": "npx vsce ls",
