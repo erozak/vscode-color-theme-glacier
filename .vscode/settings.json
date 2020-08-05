@@ -3,10 +3,5 @@
     "source.fixAll": true
   },
   "eslint.enable": true,
-  "eslint.probe": [
-    "markdown",
-    "json",
-    "jsonc"
-  ],
-  "workbench.colorTheme": "Glacier Dark"
+  "eslint.probe": ["javascript", "typescript", "markdown", "json", "jsonc"]
 }

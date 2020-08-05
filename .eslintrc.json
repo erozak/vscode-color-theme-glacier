@@ -1,33 +1,52 @@
 {
   "$schema": "http://json.schemastore.org/eslintrc",
   "root": true,
-  "plugins": [
-    "prettier"
-  ],
-  "extends": [
-    "plugin:prettier/recommended"
-  ],
+  "plugins": ["prettier"],
+  "extends": ["plugin:prettier/recommended"],
   "overrides": [
     {
-      "files": [
-        "*.md"
-      ],
-      "plugins": [
-        "markdown"
-      ]
+      "files": ["src/**/*.[t|j]s"],
+      "parser": "babel-eslint",
+      "env": {
+        "es2020": true,
+        "node": true
+      },
+      "extends": ["eslint:recommended", "plugin:import/errors", "plugin:import/warnings"],
+      "parserOptions": {
+        "ecmaVersion": 11,
+        "sourceType": "module"
+      },
+      "rules": {
+        "no-console": 1
+      }
+    },
+    {
+      "files": ["src/**/*.ts"],
+      "parser": "@typescript-eslint/parser",
+      "plugins": ["@typescript-eslint"],
+      "extends": ["plugin:@typescript-eslint/recommended", "plugin:import/typescript"]
+    },
+    {
+      "files": ["src/**/*.test.[jt]s"],
+      "plugins": ["jest"],
+      "env": {
+        "jest/globals": true
+      }
+    },
+    {
+      "files": ["*.md"],
+      "plugins": ["markdown"]
     },
     {
       "files": ["*.json"],
-      "plugins": [
-          "json"
-      ],
+      "plugins": ["json"],
       "extends": ["plugin:json/recommended"]
     },
     {
       "files": ["themes/**/*.json"],
       "rules": {
-        "json/*": ["error", {"allowComments": true}]
-    }
+        "json/*": ["error", { "allowComments": true }]
+      }
     }
   ]
 }

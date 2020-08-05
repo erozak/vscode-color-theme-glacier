@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "alwaysStrict": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "src",
+    "outDir": "lib",
+    "lib": ["DOM", "ES2019"],
+    "module": "CommonJS",
+    "target": "ES2019",
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noUnusedParameters": true,
+    "rootDir": ".",
+    "strictNullChecks": true
+  }
+}
