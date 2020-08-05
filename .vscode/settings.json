@@ -3,5 +3,6 @@
     "source.fixAll": true
   },
   "eslint.enable": true,
-  "eslint.probe": ["javascript", "typescript", "markdown", "json", "jsonc"]
+  "eslint.probe": ["javascript", "typescript", "markdown", "json", "jsonc"],
+  "cSpell.words": ["struct"]
 }

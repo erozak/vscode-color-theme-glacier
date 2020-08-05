@@ -13,10 +13,11 @@ export const Grey: Palette<700 | 500 | 300 | 100> = {
   [100]: '#6a788a',
 };
 
-export const Cyan: Palette<700 | 500 | 300> = {
+export const Cyan: Palette<700 | 500 | 300 | 100> = {
   [700]: '#90c2e0',
   [500]: '#b9d9eb',
   [300]: '#eff6fb',
+  [100]: '#ffffff',
 };
 
 export const Blue: Palette<700 | 500 | 300 | 100> = {
@@ -48,8 +49,8 @@ export const Red: Palette<700 | 500 | 300 | 100> = {
 };
 
 export const Magenta: Palette<700 | 500 | 300 | 100> = {
-  [700]: '#b2302e',
-  [500]: '#cf4442',
-  [300]: '#de7f7d',
-  [100]: '#e69f9e',
+  [700]: '#c74075',
+  [500]: '#9e2e5b',
+  [300]: '#d67199',
+  [100]: '#df90b0',
 };
