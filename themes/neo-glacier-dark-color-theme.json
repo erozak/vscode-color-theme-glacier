@@ -103,6 +103,12 @@
     "debugView.stateLabelForeground": "#f3f4f6eb", // $Text.Paragraph
     "debugView.valueChangedHighlight": "#47505c", // rgba($Black.Bright, 0.92)
     "descriptionForeground": "#f3f4f6ad", // $Text.Hint
+    // "diffEditor.border": "#ff00ff", // ?
+    // "diffEditor.diagonalFill": "#ff00ff", // ?
+    // "diffEditor.insertedTextBackground": "#ff00ff", // ?
+    // "diffEditor.insertedTextBorder": "#ff00ff", // ?
+    // "diffEditor.removedTextBackground": "#ff00ff", // ?
+    // "diffEditor.removedTextBorder": "#ff00ff", // ?
     "dropdown.background": "#2e343c", // $Black.Main
     "dropdown.border": "#00000000", // $Transparent
     "dropdown.foreground": "#ffffff", // $White.Bright ?
@@ -127,6 +133,10 @@
     "editor.selectionForeground": "#00000000", // $Transparent
     "editor.selectionHighlightBackground": "#f3f4f61f", // opacity($White.Main, 0.12)
     "editor.selectionHighlightBorder": "#00000000", // $Transparent
+    // "editor.snippetFinalTabstopHighlightBackground": "#ff00ff", // ?
+    // "editor.snippetFinalTabstopHighlightBorder": "#ff00ff", // ?
+    // "editor.snippetTabstopHighlightBackground": "#ff00ff", // ?
+    // "editor.snippetTabstopHighlightBorder": "#ff00ff", // ?
     "editor.stackFrameHighlightBackground": "#f3f4f629", // rgba($White.Main, 0.16)
     "editor.symbolHighlightBackground": "#f3f4f61f", // opacity($White.Main, 0.12)
     "editor.symbolHighlightBorder": "#00000000", // $Transparent
@@ -151,12 +161,16 @@
     "editorGroupHeader.tabsBorder": "#00000000", // $Transparent
     "editorGutter.addedBackground": "#49c47a", // $Green.Main
     "editorGutter.background": "#00000000", // $Transparent
+    // "editorGutter.commentRangeForeground": "#ff00ff", // ?
     "editorGutter.deletedBackground": "#b02c38", // $Red.Main
     "editorGutter.foldingControlForeground": "#f3f4f6eb", // $Text.Paragraph
     "editorGutter.modifiedBackground": "#1f5872", // $Blue.Main
+    // "editorHint.border": "#ff00ff", // ?
+    // "editorHint.foreground": "#ff00ff", // ?
     "editorHoverWidget.background": "#2e343c", // $Black.Main
     "editorHoverWidget.border": "#2c323a", // $Black.Main + 100
     "editorHoverWidget.foreground": "#f3f4f6eb", // $Text.Paragraph
+    // "editorHoverWidget.statusBarBackground": "#ff00ff", // ?
     "editorIndentGuide.activeBackground": "#f3f4f68c", // rgba($White.Main, 0.55)
     "editorIndentGuide.background": "#f3f4f61f", // rgba($White.Main, 0.12)
     "editorInfo.border": "#00000000", // $Transparent
@@ -187,6 +201,7 @@
     "editorOverviewRuler.warningForeground": "#fb9435", // $Yellow.Main
     "editorOverviewRuler.wordHighlightForeground": "#b9d9eb", // $Cyan.Main
     "editorOverviewRuler.wordHighlightStrongForeground": "#eff6fb", // $Cyan.Bright
+    // "editorPane.background": "#ff00ff", // ?
     "editorRuler.foreground": "#f3f4f63d", // rgba($White.Main, 0.24)
     "editorSuggestWidget.background": "#2e343c", // $Black.Main
     "editorSuggestWidget.border": "#2c323a", // $Black.Main + 100
@@ -210,6 +225,13 @@
     "extensionButton.prominentHoverBackground": "#276f90", // $Blue.Bright
     "focusBorder": "#f3f4f66d", // opacity($Cyan.Bright, 0.43)
     "foreground": "#f3f4f6eb", // $Text.Paragraph
+    // "gitDecoration.addedResourceForeground": "#ff00ff", // ?
+    // "gitDecoration.conflictingResourceForeground": "#ff00ff", // ?
+    // "gitDecoration.deletedResourceForeground": "#ff00ff", // ?
+    // "gitDecoration.ignoredResourceForeground": "#ff00ff", // ?
+    // "gitDecoration.modifiedResourceForeground": "#ff00ff", // ?
+    // "gitDecoration.submoduleResourceForeground": "#ff00ff", // ?
+    // "gitDecoration.untrackedResourceForeground": "#ff00ff", // ?
     "icon.foreground": "#f3f4f6eb", // $Text.Paragraph
     "imagePreview.border": "#121417", // $Background
     "input.background": "#2e343c", // $Black.Main
@@ -258,6 +280,24 @@
     "menubar.selectionBackground": "#f3f4f61f", // $Mask.Hover
     "menubar.selectionBorder": "#00000000", // $Transparent
     "menubar.selectionForeground": "#f3f4f6eb", // $Text.Paragraph
+    // "merge.border": "#ff00ff", // ?
+    // "merge.commonContentBackground": "#ff00ff", // ?
+    // "merge.commonHeaderBackground": "#ff00ff", // ?
+    // "merge.currentContentBackground": "#ff00ff", // ?
+    // "merge.currentHeaderBackground": "#ff00ff", // ?
+    // "merge.incomingContentBackground": "#ff00ff", // ?
+    // "merge.incomingHeaderBackground": "#ff00ff", // ?
+    // "minimap.background": "#ff00ff", // ?
+    // "minimap.errorHighlight": "#ff00ff", // ?
+    // "minimap.findMatchHighlight": "#ff00ff", // ?
+    // "minimap.selectionHighlight": "#ff00ff", // ?
+    // "minimap.warningHighlight": "#ff00ff", // ?
+    // "minimapGutter.addedBackground": "#ff00ff", // ?
+    // "minimapGutter.deletedBackground": "#ff00ff", // ?
+    // "minimapGutter.modifiedBackground": "#ff00ff", // ?
+    // "minimapSlider.activeBackground": "#ff00ff", // ?
+    // "minimapSlider.background": "#ff00ff", // ?
+    // "minimapSlider.hoverBackground": "#ff00ff", // ?
     "notificationCenter.border": "#2c323a", // $Black.Main + 100
     "notificationCenterHeader.background": "#2e343c", // $Black.Main
     "notificationCenterHeader.foreground": "#f3f4f6eb", // $Text.Paragraph
@@ -272,9 +312,32 @@
     "panel.background": "#121417", // $Background
     "panel.border": "#121417", // $Background
     "panel.dropBorder": "#ffffff0a", // opacity(#fff, 0.4)
+    // "panelInput.border": "#ff00ff", // ?
+    // "panelSection.border": "#ff00ff", // ?
     "panelSection.dropBackground": "#ffffff0a", // opacity(#fff, 0.4)
+    // "panelSectionHeader.background": "#ff00ff", // ?
+    // "panelSectionHeader.border": "#ff00ff", // ?
+    // "panelSectionHeader.foreground": "#ff00ff", // ?
+    "panelTitle.activeBorder": "#276f90", // $Blue.Bright
     "panelTitle.activeForeground": "#f3f4f6eb", // $Text.Paragraph
     "panelTitle.inactiveForeground": "#f3f4f64f", // $Text.Inactive
+    // "peekView.border": "#ff00ff", // ?
+    // "peekViewEditor.background": "#ff00ff", // ?
+    // "peekViewEditor.matchHighlightBackground": "#ff00ff", // ?
+    // "peekViewEditor.matchHighlightBorder": "#ff00ff", // ?
+    // "peekViewEditorGutter.background": "#ff00ff", // ?
+    // "peekViewResult.background": "#ff00ff", // ?
+    // "peekViewResult.fileForeground": "#ff00ff", // ?
+    // "peekViewResult.lineForeground": "#ff00ff", // ?
+    // "peekViewResult.matchHighlightBackground": "#ff00ff", // ?
+    // "peekViewResult.selectionBackground": "#ff00ff", // ?
+    // "peekViewResult.selectionForeground": "#ff00ff", // ?
+    // "peekViewTitle.background": "#ff00ff", // ?
+    // "peekViewTitleDescription.foreground": "#ff00ff", // ?
+    // "peekViewTitleLabel.foreground": "#ff00ff", // ?
+    // "problemsErrorIcon.foreground": "#ff00ff", // ?
+    // "problemsInfoIcon.foreground": "#ff00ff", // ?
+    // "problemsWarningIcon.foreground": "#ff00ff", // ?
     "progressBar.background": "#b9d9eb", // $Cyan.Main
     "scm.providerBorder": "#121417", // $Background
     "scrollbar.shadow": "#0000003d", // rgba(#000, 0.24)
@@ -309,6 +372,39 @@
     "statusBarItem.prominentHoverBackground": "#49c47a", // $Green.Main
     "statusBarItem.remoteBackground": "#00000000", // $Transparent
     "statusBarItem.remoteForeground": "#84d7a5", // $Green.Bright
+    // "symbolIcon.arrayForeground": "#ff00ff", // ?
+    // "symbolIcon.booleanForeground": "#ff00ff", // ?
+    // "symbolIcon.classForeground": "#ff00ff", // ?
+    // "symbolIcon.colorForeground": "#ff00ff", // ?
+    // "symbolIcon.constantForeground": "#ff00ff", // ?
+    // "symbolIcon.constructorForeground": "#ff00ff", // ?
+    // "symbolIcon.enumeratorForeground": "#ff00ff", // ?
+    // "symbolIcon.enumeratorMemberForeground": "#ff00ff", // ?
+    // "symbolIcon.eventForeground": "#ff00ff", // ?
+    // "symbolIcon.fieldForeground": "#ff00ff", // ?
+    // "symbolIcon.fileForeground": "#ff00ff", // ?
+    // "symbolIcon.folderForeground": "#ff00ff", // ?
+    // "symbolIcon.functionForeground": "#ff00ff", // ?
+    // "symbolIcon.interfaceForeground": "#ff00ff", // ?
+    // "symbolIcon.keyForeground": "#ff00ff", // ?
+    // "symbolIcon.keywordForeground": "#ff00ff", // ?
+    // "symbolIcon.methodForeground": "#ff00ff", // ?
+    // "symbolIcon.moduleForeground": "#ff00ff", // ?
+    // "symbolIcon.namespaceForeground": "#ff00ff", // ?
+    // "symbolIcon.nullForeground": "#ff00ff", // ?
+    // "symbolIcon.numberForeground": "#ff00ff", // ?
+    // "symbolIcon.objectForeground": "#ff00ff", // ?
+    // "symbolIcon.operatorForeground": "#ff00ff", // ?
+    // "symbolIcon.packageForeground": "#ff00ff", // ?
+    // "symbolIcon.propertyForeground": "#ff00ff", // ?
+    // "symbolIcon.referenceForeground": "#ff00ff", // ?
+    // "symbolIcon.snippetForeground": "#ff00ff", // ?
+    // "symbolIcon.stringForeground": "#ff00ff", // ?
+    // "symbolIcon.structForeground": "#ff00ff", // ?
+    // "symbolIcon.textForeground": "#ff00ff", // ?
+    // "symbolIcon.typeParameterForeground": "#ff00ff", // ?
+    // "symbolIcon.unitForeground": "#ff00ff", // ?
+    // "symbolIcon.variableForeground": "#ff00ff", // ?
     "tab.activeBackground": "#121417", // $Background
     "tab.activeBorder": "#121417", // $Background
     "tab.activeBorderTop": "#276f90", // $Blue.Bright
@@ -321,6 +417,17 @@
     "tab.inactiveBackground": "#121417", // $Background
     "tab.inactiveForeground": "#f3f4f64f", // $Text.Inactive
     "tab.inactiveModifiedBorder": "#121417", // $Background
+    // "tab.unfocusedActiveBackground": "#ff00ff", // ?
+    // "tab.unfocusedActiveBorder": "#ff00ff", // ?
+    // "tab.unfocusedActiveBorderTop": "#ff00ff", // ?
+    // "tab.unfocusedActiveForeground": "#ff00ff", // ?
+    // "tab.unfocusedActiveModifiedBorder": "#ff00ff", // ?
+    // "tab.unfocusedHoverBackground": "#ff00ff", // ?
+    // "tab.unfocusedHoverBorder": "#ff00ff", // ?
+    // "tab.unfocusedHoverForeground": "#ff00ff", // ?
+    // "tab.unfocusedInactiveBackground": "#ff00ff", // ?
+    // "tab.unfocusedInactiveForeground": "#ff00ff", // ?
+    // "tab.unfocusedInactiveModifiedBorder": "#ff00ff", // ?
     "terminal.ansiBlack": "#2e343c", // $Black.Main
     "terminal.ansiBlue": "#1f5872",
     "terminal.ansiBrightBlack": "#47505c", // $Black.Bright
@@ -340,6 +447,8 @@
     "terminal.background": "#121417", // $Background
     "terminal.border": "#121417", // $Background
     "terminal.foreground": "#f3f4f6", // $White.Main
+    // "terminal.selectionBackground": "#ff00ff", // ?
+    // "terminalCursor.background": "#ff00ff", // ?
     "terminalCursor.foreground": "#f3f4f6eb", // $Text.Paragraph
     "textBlockQuote.background": "#2e343c3f", // rgba($Black.Main, 0.63)
     "textBlockQuote.border": "#b9d9ebef", // rgba($Black.Main, 0.93)
@@ -361,24 +470,6 @@
     "widget.shadow": "#0000003d", // rgba(#000, 0.24)
     "window.activeBorder": "#121417", // $Background
     "window.inactiveBorder": "#2e343c" // $Black.Main
-    // "editorGutter.commentRangeForeground": "#ff00ff"
-    // "editor.snippetFinalTabstopHighlightBackground": "#ff00ff",
-    // "editor.snippetFinalTabstopHighlightBorder": "#ff00ff",
-    // "editor.snippetTabstopHighlightBackground": "#ff00ff",
-    // "editor.snippetTabstopHighlightBorder": "#ff00ff",
-    // "editorGutter.commentRangeForeground": "#ff00ff",
-    // "editorHint.border": "#ff00ff",
-    // "editorHint.foreground": "#ff00ff",
-    // "editorHoverWidget.statusBarBackground": "#ff00ff",
-    // "editorPane.background": "#ff00ff",
-    // "panelInput.border": "#ff00ff",
-    // "panelSection.border": "#ff00ff",
-    // "panelSectionHeader.background": "#ff00ff",
-    // "panelSectionHeader.border": "#ff00ff",
-    // "panelSectionHeader.foreground": "#ff00ff",
-    // "panelTitle.activeBorder": "#f3f4f6", // $White.Main
-    // "terminal.selectionBackground": "#ff00ff",
-    // "terminalCursor.background": "#ff00ff",
   },
   "tokenColors": [
     {
