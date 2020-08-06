@@ -1,5 +1,8 @@
+
 // For a detailed explanation regarding each configuration property, visit:
 // https://jestjs.io/docs/en/configuration.html
+
+const { defaults: tsjPreset } = require('ts-jest/presets');
 
 module.exports = {
   // All imported modules in your tests should be mocked automatically
@@ -162,7 +165,9 @@ module.exports = {
   // timers: "real",
 
   // A map from regular expressions to paths to transformers
-  // transform: undefined,
+  transform: {
+    ...tsjPreset.transform
+  },
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
   // transformIgnorePatterns: [

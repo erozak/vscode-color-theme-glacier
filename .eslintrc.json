@@ -5,6 +5,13 @@
   "extends": ["plugin:prettier/recommended"],
   "overrides": [
     {
+      "files": ["jest.config.js"],
+      "env": {
+        "es6": true,
+        "node": true
+      }
+    },
+    {
       "files": ["src/**/*.[t|j]s"],
       "parser": "babel-eslint",
       "env": {
