@@ -1,4 +1,4 @@
-import Color from 'color';
+import Color = require('color');
 
 export type Palette<K extends string | number> = Readonly<Record<K, Color>>;
 

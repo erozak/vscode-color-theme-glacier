@@ -1,4 +1,4 @@
-import Color from 'color';
+import Color = require('color');
 
 import type { Palette } from './types';
 

@@ -824,12 +824,18 @@ export type VsCodeColorThemeColors<C = string> = Partial<
     }
 >;
 
+export type VsCodeColorThemeType = 'dark' | 'light' | 'contrast';
+
 export interface VsCodeColorTheme<C = string> {
+  name: string;
+  type: VsCodeColorThemeType;
   colors?: VsCodeColorThemeColors<C>;
   tokenColors?: VsCodeColorThemeTokenColor<C>[];
 }
 
 export interface VsCodeColorThemeJson {
+  name: string;
+  type: VsCodeColorThemeType;
   colors?: Record<string, string>;
   tokenColors?: VsCodeColorThemeTokenColor[];
 }
