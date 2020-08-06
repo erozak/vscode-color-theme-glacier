@@ -1,0 +1,24 @@
+{
+  "name": "",
+  "author": "",
+  "color": [
+    "#2e343c", // Black
+    "#b02c38", // Red
+    "#49c47a", // Green
+    "#fb9435", // Yellow
+    "#1f5872", // Blue
+    "#c74075", // Magenta
+    "#90c2e0", // Cyan
+    "#b9bfca", // Grey
+    "#505a68", // BrightBlack
+    "#d24b57", // BrightRed
+    "#84d7a5", // BrightGreen
+    "#fcb573", // BrightYellow
+    "#3088b0", // BrightBlue
+    "#d67199", // BrightMagenta
+    "#b9d9eb", // BrightCyan
+    "#f3f4f6"  // BrightGrey
+  ],
+  "foreground": "#f3f4f6",
+  "background": "#121417"
+}
