@@ -5,9 +5,7 @@ import type {
   OperationColors,
   BadgeColors,
   ButtonColors,
-  ThemeColors,
   TokenColors,
-  PaneColors,
   ContrastColors,
 } from '../types';
 
