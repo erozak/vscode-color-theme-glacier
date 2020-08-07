@@ -1,2 +1,2 @@
 export * from './terminal.model';
-export * from './terminal.windowsTerminal';
+export * from './terminal.windowsTerminalOutput';

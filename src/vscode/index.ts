@@ -1,2 +1,2 @@
 export * from './vscode.types';
-export * from './vscode.colorTheme';
+export * from './vscode.colorThemeOutput';
