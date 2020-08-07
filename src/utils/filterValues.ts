@@ -1,8 +1,10 @@
-export function filterValues<I, S extends PlainObj<I>>(
+export function filterValues<S extends PlainObj<unknown>>(
   source: S,
-  predicator: (item: I, key: keyof S, obj: S) => boolean,
+  predicator: (item: ValueOf<S>, key: keyof S, obj: S) => boolean,
 ): S {
   return Object.fromEntries(
-    Object.entries(source).filter(([key, value]) => predicator(value, key, source)),
+    Object.entries(source).filter(([key, value]) =>
+      predicator(value as ValueOf<S>, key, source),
+    ),
   ) as S;
 }

@@ -16,19 +16,20 @@ function _flatObject<S extends Record<string, unknown>, O>(
 ): Record<string, O> {
   return Object.keys(source).reduce((record, key): Record<string, O> => {
     const value = source[key];
+    const currentPathes = pathes.concat(key);
 
     if (isObject(value) && value) {
       Object.assign(
         record,
         _flatObject<Record<string, unknown>, O>(
           value as Record<string, unknown>,
-          pathes.concat(key),
+          currentPathes,
           project,
         ),
       );
     } else {
-      record[key] = project
-        ? (project(source[key] as ValueOf<S>, key, source, pathes) as O)
+      record[currentPathes.join('.')] = project
+        ? (project(source[key] as ValueOf<S>, key, source, currentPathes) as O)
         : (value as O);
     }
 

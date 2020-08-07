@@ -19,6 +19,6 @@ export function stringifyColorSettings(
           : null,
       ),
       Boolean,
-    ) as Record<string, string>;
+    );
   } else return {};
 }
