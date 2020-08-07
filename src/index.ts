@@ -15,5 +15,4 @@ buildup({
     },
   ],
   path: joinPath(process.cwd(), 'build'),
-  prettierConfigPath: joinPath(__dirname, '../.prettierrc.json'),
 });

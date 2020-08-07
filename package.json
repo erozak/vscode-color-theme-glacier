@@ -86,7 +86,7 @@
     }
   },
   "lint-staged": {
-    "**/*.ts": [
+    "**/*.{ts,js}": [
       "eslint --fix --cache"
     ],
     "**/*.{json,md}": [
