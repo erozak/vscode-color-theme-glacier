@@ -1,5 +1,5 @@
 import { makeTheme } from '../makeTheme';
-import { darkThemeTerminalColors } from './dark.terminal';
+import { darkThemeTerminalColors } from './darkTheme.terminal';
 
 export const darkTheme = makeTheme(
   {
