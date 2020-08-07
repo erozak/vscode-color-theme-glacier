@@ -5,7 +5,7 @@ import Color = require('color');
 
 import type { VscodeColorTheme } from './vscode';
 
-import { makeDirectory, writeFile } from './io';
+import { makeDirectory, writeFile, getPrettierOptions } from './io';
 import { vscodeColorThemeOutput } from './vscode';
 
 async function outputTheme(
@@ -56,16 +56,15 @@ async function outputThemes(
 export async function buildup(
   config: {
     themes: VscodeColorTheme<Color | string>[];
-    prettierConfigPath: string;
   } & Omit<OutputThemeConfig, 'prettierOptions'>,
 ): Promise<void> {
-  const { themes, prettierConfigPath, path, ...outputConfig } = config;
+  const { themes, path, ...outputConfig } = config;
 
   if (path) await makeDirectory(path);
 
   await outputThemes(themes, {
     ...outputConfig,
     path,
-    prettierOptions: await prettier.resolveConfig(prettierConfigPath),
+    prettierOptions: await getPrettierOptions(),
   });
 }
