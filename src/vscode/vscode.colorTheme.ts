@@ -34,7 +34,11 @@ function normalizeTokenColor(
   } else return tokenColor as VscodeColorThemeTokenColor;
 }
 
-export const vscodeOutput: VscodeOutput = function vscodeOutput(meta, theme, config) {
+export const vscodeColorThemeOutput: VscodeOutput = function vscodeOutput(
+  meta,
+  theme,
+  config,
+) {
   const data = {
     ...meta,
     colors: normalizeColors(theme.colors as ColorSettings),

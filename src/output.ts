@@ -6,7 +6,7 @@ import Color = require('color');
 import type { VscodeColorTheme } from './vscode';
 
 import { makeDirectory, writeFile } from './io';
-import { vscodeOutput } from './vscode';
+import { vscodeColorThemeOutput } from './vscode';
 
 async function outputTheme(
   path: string,
@@ -17,7 +17,7 @@ async function outputTheme(
 ): Promise<boolean> {
   let data: string;
   try {
-    data = vscodeOutput({ name: theme.name, type: theme.type }, theme, options);
+    data = vscodeColorThemeOutput({ name: theme.name, type: theme.type }, theme, options);
   } catch (error) {
     return false;
   }
