@@ -2,7 +2,7 @@ import Color = require('color');
 
 import type { VscodeColorThemeTokenColor, VscodeOutput } from './vscode.types';
 
-import { stringifyColor, flatObject } from '../utils';
+import { stringifyColor, flatObject, filterValues } from '../utils';
 import { jsonStringify } from '../io';
 
 interface ColorSettings {
@@ -11,9 +11,12 @@ interface ColorSettings {
 
 function normalizeColors(colors: ColorSettings | undefined): Record<string, string> {
   if (colors) {
-    return flatObject(colors, (value: string | Color) =>
-      value ? stringifyColor(value, { alpha: true }) : null,
-    );
+    return filterValues(
+      flatObject(colors, (value: string | Color) =>
+        value ? stringifyColor(value, { alpha: true }) : null,
+      ),
+      Boolean,
+    ) as Record<string, string>;
   } else return {};
 }
 
