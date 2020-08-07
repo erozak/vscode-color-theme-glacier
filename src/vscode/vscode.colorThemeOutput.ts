@@ -1,24 +1,11 @@
 import Color = require('color');
 
 import type { VscodeColorThemeTokenColor, VscodeOutput } from './vscode.types';
+import type { ColorSettings } from './vscode.stringifyColorSettings';
 
-import { stringifyColor, flatObject, filterValues } from '../utils';
+import { stringifyColor } from '../utils';
 import { jsonStringify } from '../io';
-
-interface ColorSettings {
-  [key: string]: Color | string | ColorSettings;
-}
-
-function normalizeColors(colors: ColorSettings | undefined): Record<string, string> {
-  if (colors) {
-    return filterValues(
-      flatObject(colors, (value: string | Color) =>
-        value ? stringifyColor(value, { alpha: true }) : null,
-      ),
-      Boolean,
-    ) as Record<string, string>;
-  } else return {};
-}
+import { stringifyColorSettings } from './vscode.stringifyColorSettings';
 
 function normalizeTokenColor(
   tokenColor: VscodeColorThemeTokenColor<Color | string>,
@@ -41,7 +28,7 @@ export const vscodeColorThemeOutput: VscodeOutput = function vscodeOutput(
 ) {
   const data = {
     ...meta,
-    colors: normalizeColors(theme.colors as ColorSettings),
+    colors: stringifyColorSettings(theme.colors as ColorSettings),
     tokenColors: theme.tokenColors?.map(normalizeTokenColor) ?? [],
   };
 
