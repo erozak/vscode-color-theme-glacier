@@ -4,5 +4,5 @@
   },
   "eslint.enable": true,
   "eslint.probe": ["javascript", "typescript", "markdown", "json", "jsonc"],
-  "cSpell.words": ["prettierrc", "struct", "untrack", "untracked"]
+  "cSpell.words": ["hexa", "prettierrc", "struct", "untrack", "untracked"]
 }
