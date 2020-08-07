@@ -1,57 +1,28 @@
-import { writeFile, mkdir } from 'fs';
-import { isEmpty, kebabCase } from 'lodash';
+import { kebabCase } from 'lodash';
 import { join as joinPath } from 'path';
 import prettier = require('prettier');
 import Color = require('color');
 
-import type { VsCodeColorTheme } from './vscode';
+import type { VscodeColorTheme } from './vscode';
 
-import { buildColorThemeJson } from './buildColorThemeJson';
-
-function makeFolder(path: string): Promise<boolean> {
-  return new Promise((resolve, reject) =>
-    mkdir(path, error => (error ? reject(error) : resolve(true))),
-  );
-}
-
-function writeThemeFile(path: string, data: string): Promise<boolean> {
-  if (isEmpty(data)) return Promise.resolve(false);
-  else {
-    return new Promise((resolve, reject) =>
-      writeFile(
-        path,
-        data,
-        {
-          flag: 'w',
-        },
-        error => (error ? reject(error) : resolve(true)),
-      ),
-    );
-  }
-}
+import { makeDirectory, writeFile } from './io';
+import { vscodeOutput } from './vscode';
 
 async function outputTheme(
   path: string,
-  theme: VsCodeColorTheme<Color | string>,
+  theme: VscodeColorTheme<Color | string>,
   options: {
     prettierOptions?: prettier.Options | null;
   } = {},
 ): Promise<boolean> {
   let data: string;
   try {
-    data = JSON.stringify(buildColorThemeJson(theme));
-
-    if (options.prettierOptions) {
-      data = prettier.format(data, {
-        ...options.prettierOptions,
-        parser: 'json-stringify',
-      });
-    }
+    data = vscodeOutput({ name: theme.name, type: theme.type }, theme, options);
   } catch (error) {
     return false;
   }
 
-  return await writeThemeFile(path, data);
+  return await writeFile(path, data);
 }
 
 export interface OutputThemeConfig {
@@ -60,7 +31,7 @@ export interface OutputThemeConfig {
 }
 
 async function outputThemes(
-  themes: VsCodeColorTheme<Color | string>[],
+  themes: VscodeColorTheme<Color | string>[],
   config: OutputThemeConfig = {},
 ): Promise<void> {
   const { path = process.cwd(), prettierOptions } = config;
@@ -84,13 +55,13 @@ async function outputThemes(
 
 export async function buildup(
   config: {
-    themes: VsCodeColorTheme<Color | string>[];
+    themes: VscodeColorTheme<Color | string>[];
     prettierConfigPath: string;
   } & Omit<OutputThemeConfig, 'prettierOptions'>,
 ): Promise<void> {
   const { themes, prettierConfigPath, path, ...outputConfig } = config;
 
-  if (path) await makeFolder(path);
+  if (path) await makeDirectory(path);
 
   await outputThemes(themes, {
     ...outputConfig,
