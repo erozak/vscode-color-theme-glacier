@@ -1,5 +1,12 @@
 import Color = require('color');
 
+export type ThemeType = 'dark' | 'light' | 'contrast';
+
+export interface ThemeMeta {
+  name: string;
+  type: ThemeType;
+}
+
 export type Palette<K extends string | number> = Readonly<Record<K, Color>>;
 
 export interface OpacityParams {
