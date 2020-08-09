@@ -1,12 +1,6 @@
-import { makeTheme } from '../makeTheme';
+import { defineTheme, ThemeType } from '../theme';
 import { darkThemeTerminalColors } from './darkTheme.terminal';
 
-export const darkTheme = makeTheme(
-  {
-    name: 'Neo Glacier Dark',
-    type: 'dark',
-  },
-  {
-    terminal: darkThemeTerminalColors,
-  },
-);
+export const darkTheme = defineTheme('Neo Glacier Dark', ThemeType.DARK, {
+  terminal: darkThemeTerminalColors,
+});

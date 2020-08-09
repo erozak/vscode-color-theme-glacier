@@ -1,5 +1,19 @@
 import Color = require('color');
 
+// types
+
+export type ColorValue = Color | string;
+export type PlainObj<
+  T,
+  K extends string | number | symbol = string | number | symbol
+> = Record<K, T>;
+
+// utils
+
+export type ValueOf<T> = T[keyof T];
+
+export type Element<K extends string> = Partial<Record<K, ColorValue>>;
+
 export type ThemeType = 'dark' | 'light' | 'contrast';
 
 export interface ThemeMeta {
@@ -7,7 +21,7 @@ export interface ThemeMeta {
   type: ThemeType;
 }
 
-export type Palette<K extends string | number> = Readonly<Record<K, Color>>;
+export type Palette<K extends string | number> = Readonly<Record<K, ColorValue>>;
 
 export interface OpacityParams {
   primaryText?: number;
@@ -34,57 +48,3 @@ export function makeOpacityParams(values?: OpacityParams): Required<OpacityParam
     ] as Array<keyof OpacityParams>).map(key => [key, values?.[key] ?? DEFAULT_VALUE]),
   ) as Required<OpacityParams>;
 }
-
-export type ColorDef<K extends string> = Readonly<Partial<Record<K, Color>>>;
-
-export type TextColors = ColorDef<
-  'primary' | 'secondary' | 'hint' | 'inactive' | 'disabled'
->;
-
-export type LinkColors = ColorDef<'inactive' | 'active'>;
-
-export type ButtonColors = ColorDef<'foreground' | 'background' | 'hoverBackground'>;
-
-export type BadgeColors = ColorDef<'foreground' | 'background'>;
-
-export type SeverityColors = ColorDef<'warning' | 'error' | 'info' | 'success'>;
-
-export type OperationColors = ColorDef<
-  | 'confliction'
-  | 'insertion'
-  | 'deletion'
-  | 'ingore'
-  | 'modification'
-  | 'untrack'
-  | 'submodule'
->;
-
-export type PaneColors = ColorDef<'border' | 'foreground' | 'background'>;
-
-export type TokenColors = ColorDef<
-  'boolean' | 'error' | 'name' | 'number' | 'string' | 'value'
->;
-
-export type CursorColors = ColorDef<'forground' | 'background'>;
-
-export type ContrastColors = ColorDef<'border' | 'activeBorder'>;
-
-export type TerminalColors = PaneColors &
-  ColorDef<
-    | 'black'
-    | 'blue'
-    | 'brightblack'
-    | 'brightblue'
-    | 'brightcyan'
-    | 'brightgreen'
-    | 'brightmagenta'
-    | 'brightred'
-    | 'brightwhite'
-    | 'brightyellow'
-    | 'cyan'
-    | 'green'
-    | 'magenta'
-    | 'red'
-    | 'white'
-    | 'yellow'
-  >;
