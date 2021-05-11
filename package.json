@@ -56,7 +56,7 @@
     "color": "^3.1.2",
     "dotenv": "^8.2.0",
     "fs": "0.0.1-security",
-    "lodash": "^4.17.19",
+    "lodash": "^4.17.21",
     "path": "^0.12.7",
     "ts-node": "^8.10.2",
     "typescript": "^3.9.7"
